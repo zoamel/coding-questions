@@ -2,7 +2,7 @@ export function twoSum(nums: number[], target: number): number[] {
   const seen = new Map<number, number>()
   let response: number[] = []
 
-  nums.forEach((num, index) => {
+  nums.map((num, index) => {
     const diff = target - num
 
     if (seen.has(diff)) {
