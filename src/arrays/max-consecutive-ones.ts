@@ -5,9 +5,12 @@ export function findMaxConsecutiveOnes(nums: number[]): number {
   nums.forEach((num) => {
     if (num === 1) {
       currentMax = currentMax + 1
-      max = Math.max(max, currentMax)
     } else {
       currentMax = 0
+    }
+
+    if (currentMax > max) {
+      max = currentMax
     }
   })
 
